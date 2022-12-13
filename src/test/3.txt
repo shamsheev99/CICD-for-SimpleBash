@@ -1,0 +1,46 @@
+ot
+e that the character in that sed command is a low
+er
+
+
+r "L",
+
+ an
+ d not
+  the nu
+
+
+
+  mber one 
+  
+  ("1").
+
+
+This c
+
+This is 
+sim
+ilar t
+o u
+sing t
+
+
+xcept fo
+r the 
+handling
+
+
+
+on-print
+ing
+ char
+
+acters. Y
+ou can also see something 
+imilar w
+it
+h the vi "binary
+ mode" arg
+
+
+ument, like this:

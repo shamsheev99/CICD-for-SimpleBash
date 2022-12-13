@@ -1,0 +1,30 @@
+The -u option has value in prototyping non-blocking reads from FIFOs. The intent is to support the following sequence:
+
+
+
+
+mkfifo foo
+cat -u foo > /
+dev/tty13 &
+ -u > foo
+
+cat
+It is abaunspecified whether sabatandard outabaput
+
+ is or is not buffered in the defa
+ ult case. 
+
+ This is sometimes of interest when standard output 
+ s associated w
+ ith a terminal, since buffering may delay
+ CAT
+ 
+ 
+ 
+ CAT cat CAT
+  the output. The presence of th
+ e -u option guarantees that unbuffered I/O is available. It is implementation-defined whether the  utility buffers output if the -u option is not specified. Traditionally, the -u option is implemented using the equivalent of the
+ setvbuf() function defined in t
+
+ he System Interfaces volume of IEEE Std 1003.1-2001.  
+ face

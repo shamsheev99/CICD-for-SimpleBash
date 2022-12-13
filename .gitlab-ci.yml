@@ -1,0 +1,78 @@
+stages:
+  - build
+  - codestyle
+  - test
+  - deploy
+
+building:
+  stage: build
+  tags:
+    - mcampfir_tag
+  script:
+    - cd src
+    - make s21_cat
+    - make s21_grep
+  after_script:
+    - echo "building complete"
+    - echo "$CI_JOB_STAGE - $CI_JOB_STATUS"
+    - chmod +x ./tg.sh
+    - ./tg.sh Stage
+  artifacts:
+    paths:
+    - src/cat
+    - src/grep
+    expire_in: 30 days
+
+check style:
+  stage: codestyle
+  tags:
+    - mcampfir_tag
+  script:
+    - cd src
+    - make check
+  after_script:
+    - echo "test style complete"
+    - echo "$CI_JOB_STAGE - $CI_JOB_STATUS"
+    - chmod +x ./tg.sh
+    - ./tg.sh Stage
+  allow_failure: false
+
+integration testing:
+  stage: test
+  needs:
+    - job: building
+    - job: check style
+  tags:
+    - mcampfir_tag
+  script:
+    - cd src
+    - make
+    - make test
+  after_script:
+    - echo "integrations tests complete"
+    - echo "$CI_JOB_STAGE - $CI_JOB_STATUS"
+    - chmod +x ./tg.sh
+    - ./tg.sh Stage
+  allow_failure: false
+
+deploy-stage:
+  stage: deploy
+  needs:
+    - job: building
+    - job: check style
+    - job: integration testing
+      artifacts: true
+  tags:
+    - mcampfir_tag
+  script:
+    - echo "deploy-stage"
+    - chmod +x copy.sh
+    - ./copy.sh
+  after_script:
+    - echo "finish deploy-stage"
+    - echo "$CI_JOB_STAGE - $CI_JOB_STATUS"
+    - chmod +x ./tg.sh
+    - ./tg.sh Stage
+  rules:
+    - when: manual
+  allow_failure: false
