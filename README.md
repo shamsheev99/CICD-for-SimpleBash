@@ -1,12 +1,6 @@
 # Basic CI/CD
 
-> При старте работы над проектом просим вас постараться хронометрировать время работы над проектом.
-> По завершении работы над проектом просим вас ответить на два вопроса [в этом опросе](https://forms.gle/qwrheisdMJ3gVE8d7)
-
 Development of a simple **CI/CD** for the *SimpleBashUtils* project. Building, testing, deployment.
-
-The russian version of the task can be found in the repository.
-
 
 ## Contents
 
@@ -26,32 +20,6 @@ The russian version of the task can be found in the repository.
 
 
 ## Chapter I
-
-![basic_ci_cd](misc/images/basic_ci_cd.JPG)
-
-Planet Earth, United Kingdom of Great Britain and Northern Ireland, London, Oxford Street, ASI office, nowadays.
-
-You have had a few days after arriving at the port of London to settle in and explore the city a little, then comes the day on which you had to go to your new job.
-
-Today you arrive in a cab at the door of the company's office, for which you ended up in Albion.
-In the letter you received on the day you arrived, you were given the door code and your office number.
-Surprised by the empty corridors and the deathly silence, you descend a few floors down, where you find your workplace without any problems.
-
-There you find a recently turned on computer and an intercom in a poor state.
-As you walk in and close the door behind you, a robotic voice emerges from it.
-
-`-` Welcome to the ASI lab's computerised experimental center.
-
-`-` The analysis of your body's characteristics is done. We are ready to begin.
-
-`-` You will be supporting one of our experimental center projects
-
-`-` Your first task will be to create a **CI/CD** for the well-known **cat** and **grep** utilities.
-
-`-` Before starting, we would like to remind you that although learning through play is the main principle of the experimental center, we do not guarantee the absence of injuries and trauma.
-
-`-` For your own safety and the safety of others, please refrain from touching *bzzz* anything at all.
-
 
 ## Chapter II
 
@@ -213,24 +181,3 @@ It does not say what they won the prize for, but certainly not for their ability
 
 
 ## Chapter IV
-
-`-` Good. After completing a series of tasks, the employee should go to the break room.
-
-While you have a free moment in the break room you decide to check your mail, thinking about the weirdness of what is going on.
-
-
-Just before you get your phone out, another person walks into the break room.
-
-`-` Hi, haven't seen you here before.
-
-`-` That would be strange if you had. It's my first day here, huh.
-
-`-`Oh, first day! So, what do you think of our "boss"? - the last words were spoken with an obvious grin
-
-`-` That was the boss? Phew, I'm not the only one who thinks he's weird... and a bit rude? I thought you were all like that in England.
-
-`-` Haha, definitely not, mate. It's just a prank on the newbies, but don't worry everything will be fine tomorrow. By the way, here comes the real boss, looks like he's coming your way. Well, good luck, see you later.
-
-The stranger quickly disappeared and a short man in an expensive suit, with a slight baldness, in his early fifties or sixties, entered the room. Without waiting for you to speak, he said with a subtle, barely noticeable smile:
-
-`-` Oh, you must be Thomas. Truly magnificent performance of the test work. I hope you weren't intimidated by our lovely friend ASI Junior, she spoke highly of you. So, let me tell you more about what we do here in general and what is your role in our company...
